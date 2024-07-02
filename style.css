@@ -1,33 +1,119 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
   }
   
   .container {
-    margin-top: 50px;
+    margin-top: 20px;
   }
   
   .column {
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #ff6b6b, #f0e130);
+    color: #ffffff;
     border: 1px solid #dee2e6;
     padding: 100px;
-    margin: 0px;
+    margin-bottom: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
   }
   
   .column:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
+    color: #ffffff;
   }
   
+  .column h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .column p {
+    color: #ffffff;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .column img {
+    margin-top: 15px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .column i {
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+  
+  .btn-primary {
+    background-color: #ff4757;
+    border-color: #ff4757;
+    border-radius: 50px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, border-color 0.3s;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e84118;
+    border-color: #e84118;
+  }
+  
+  /* Animasi */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .column:hover .icon i {
+    animation: pulse 1s infinite;
+  }
+  
+  /* Media Query untuk tampilan mobile */
   @media (max-width: 768px) {
     .column {
       width: 100%;
-      margin: 0px;
+      margin-bottom: 20px;
     }
   }
   
